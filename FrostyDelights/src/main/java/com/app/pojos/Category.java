@@ -26,7 +26,7 @@ public class Category extends BaseEntity {
 	// one to many : bi dir Category 1--->* Product
 	//Category -- one , parent , inverse(since no FK mapping)
 	
-	//@JsonManagedReference
+	@JsonManagedReference
 	@OneToMany(mappedBy = "productCategory",
 			cascade = CascadeType.ALL, orphanRemoval = true ,fetch = FetchType.EAGER)
 	private List<Product> products;// init to empty list

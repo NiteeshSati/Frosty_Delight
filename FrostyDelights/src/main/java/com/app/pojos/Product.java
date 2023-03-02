@@ -23,7 +23,7 @@ public class Product extends BaseEntity {
 	@Column(name = "in_stock")
 	private boolean inStock;
 	
-	//@JsonBackReference
+	@JsonBackReference
 	// many to one Product *-----> 1Category
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id")
